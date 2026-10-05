@@ -353,13 +353,13 @@ const $=id=>document.getElementById(id);
 const Rn=n=>"R"+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",");
 const S=[["Gas hob","Hob installation",2000],["Gas geyser","Geyser installation",3450],["Hob + geyser combo","Combo installation (two CoCs)",4950],["CoC inspection only","CoC inspection",950]];
 const C=[["Existing cylinder on site",0],["Single bottle (regulator and pigtail)",450],["Dual bottle changeover",950]];
-const PM=60,FREE=3,CAGE=1150,DRILL=350;
+const PM=60,FREE=3,CAGE=1150,DRILL=1000;
 function quote(si,ci,d,cage,drill,X,ov){
  const v=S[si],L=[ov||[v[1],v[2]],["Certificate of Compliance","Included"],...X];
  if(si!==3){
   if(C[ci][1])L.push([C[ci][0],C[ci][1]]);
   if(d>FREE)L.push([`Extra pipe run (${d-FREE}m × ${Rn(PM)})`,(d-FREE)*PM]);
-  if(cage)L.push(["Security cage",CAGE]);if(drill)L.push(["Diamond core drilling",DRILL]);
+  if(cage)L.push(["Security cage",CAGE]);if(drill)L.push(["Granite cutting",DRILL]);
  }
  return{lines:L,total:L.reduce((a,l)=>a+(typeof l[1]==="number"?l[1]:0),0)};
 }
