@@ -669,7 +669,7 @@ function renderGeysers(){
 }
 $("gcat").addEventListener("click",e=>{if(e.target.closest("[data-sa]")){showAll=!showAll;renderGeysers()}});
 const GAL=[["Gas hob installation","#0f766e"],["Outdoor gas geyser","#0369a1"],["Copper pipe run to hob","#b45309"],["Dual bottle changeover","#7c3aed"],["Geyser flue and clearances","#be123c"],["Security cage for cylinders","#334155"],["Hob and geyser combo","#4d7c0f"],["Wok burner hob","#9f1239"],["Signed Certificate of Compliance","#115e59"]];
-$("gcards").innerHTML=GAL.map(g=>`<figure class="gcard"><img src="${ph(g[0],g[1])}" alt="${g[0]}" width="640" height="480" loading="lazy"><figcaption><b>${g[0]}</b>Placeholder photo. Replace with a real job photo.</figcaption></figure>`).join("");
+$("gcards").innerHTML=GAL.map(g=>`<figure class="gcard"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QL4eezECq_Jl44QYzOdhBzkyK3D5OFnfh70Mh0sZ9PPWjnA0f2wv5aWvzvM7ueoOiM8XlfTuJla2g8jQokGRqqZI8zTAZVuJGXw9PSJ_RhAf93C3j-Ir4ZjKo1Nq192JIH5W2IS19HpAcr=s680-w680-h510-rw" alt="${g[0]}" width="640" height="480" loading="lazy"><figcaption><b>${g[0]}</b>Placeholder photo. Replace with a real job photo.</figcaption></figure>`).join("");
 renderGeysers();
 let QUOTE=null,PDF=null;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
