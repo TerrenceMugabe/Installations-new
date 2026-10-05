@@ -352,7 +352,7 @@ dialog#qd::backdrop{background:rgba(15,23,42,.7)}
 const $=id=>document.getElementById(id);
 const Rn=n=>"R"+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,",");
 const S=[["Gas hob","Hob installation",2000],["Gas geyser","Geyser installation",3450],["Hob + geyser combo","Combo installation (two CoCs)",4950],["CoC inspection only","CoC inspection",950]];
-const C=[["Existing cylinder on site",0],["Single bottle (regulator and pigtail)",450],["Dual bottle changeover",950]];
+const C=[["Existing cylinder on site",0],["Single bottle (regulator and pigtail)",900],["Dual bottle changeover",950]];
 const PM=60,FREE=3,CAGE=1150,DRILL=1000;
 function quote(si,ci,d,cage,drill,X,ov){
  const v=S[si],L=[ov||[v[1],v[2]],["Certificate of Compliance","Included"],...X];
